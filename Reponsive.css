@@ -1,0 +1,121 @@
+*{
+    box-sizing: inherit;
+}
+
+@media (max-width:739px){
+    :root {
+        --header-height: 54px;
+        --navbar-height: 0px;
+    }
+
+    /* Header */
+    .app__content{
+        padding: unset;
+    }
+    .header-with-search{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10px;
+    }
+    @keyframes mobileSearch {
+        from{
+            top: 40px;
+            opacity: 0;
+            /* animation-timing-function: ease-out; */
+            
+        }
+        to{
+            top: 60px;
+            opacity: 1;
+
+            /* animation-timing-function: ease-in; */
+            
+        }
+    }
+    .header_search{
+        /* display: none; */
+        position: absolute;
+        top: 60px;
+        width: 95%;
+        margin-left: unset;
+        z-index: 999;
+        animation: mobileSearch linear 0.2s;
+    }
+    .header__logo{
+        font-size: 26px;
+        order: 2;
+        width: unset;
+    }
+    .header__logo .header__logo-img{
+        width: 125px;
+    }
+    .header_cart{
+        order: 3;
+        width: unset;
+        margin-right: 12px;
+        margin-left: 10px;
+    }
+    .header_cart-notice{
+        right: -12px;
+    }
+    .header_cart-icon{
+        font-size: 26px;
+        
+    }
+    .header__icon-search{
+        display: block;
+        color: white;
+        font-size: 28px;
+        margin-right: 10px;
+    }
+
+    /* filter item */
+    .home-filter{
+        padding: unset;
+        justify-content: space-around;
+        background-color: white;
+        display: unset;
+    }
+    .home-filter__options{
+        display: flex;
+        /* justify-content: space-between; */
+        background-color: white;
+        height: 36px;
+    }
+    .select-input{
+        min-width: 90px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        display: unset;
+    }
+    .home-filter__btn{
+        margin-right: unset;
+        height: 36px;
+        position: relative;
+    }
+    .home-filter__btn::before{
+        content: "";
+        position: absolute;
+        top: 25%;
+        left: 0;
+        height: 60%;
+        border-left: 1px solid #e5e5e5;
+        
+    }
+    .select-input:before{
+        display: none;
+    }
+    .home-product{
+        margin-top: -6px;
+    }
+    .btn--primary{
+        background-color: white;
+        color: var(--primary-color);
+    }
+    .footer-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+}
+
